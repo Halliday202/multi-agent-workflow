@@ -14,3 +14,6 @@
 ## Done
 * [ ] Initialize Next.js repository.
 * [ ] Set up the `.agents` directory structure.
+* [x] Refactor Master Agent into deterministic dispatcher with Zod schema validation.
+* [x] Consolidate multi-step tool call workflows into static native functions.
+* [x] Create WORKFLOW_REGISTRY.md mapping JSON intent schemas to native execution endpoints.

@@ -13,3 +13,10 @@
 * Context: The application requires managing UI state without prop drilling.
 * Decision: We will use React Context for global state and local component state for UI toggles.
 * Consequence: The frontend agent should not install Redux or Zustand.
+
+## Decision 3: Deterministic-First Schema-Driven Multi-Agent Architecture
+* Date: 2026-07-24
+* Status: Accepted
+* Context: Multi-agent reasoning loops were repeatedly consuming tokens on already-solved workflow patterns and dynamic scripts.
+* Decision: Master Agent acts strictly as a deterministic dispatcher. Known task patterns output Zod-validated JSON payloads that execute native functions directly. Sub-agents are invoked only as a fallback.
+* Consequence: Reduced token consumption, eliminated runtime script generation, and enforced predictable execution paths via WORKFLOW_REGISTRY.md.
